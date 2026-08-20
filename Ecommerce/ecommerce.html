@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="ecommerce.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">product listing</div>
+      <div class="search-wrap">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search products..."
+        />
+      </div>
+      <button id="cartBtn" class="cart-btn">
+        Cart <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ONLINE STORE</p>
+          <h1>Find something you’ll love.</h1>
+          <p class="hero-text">
+            Browse products, use the filters, and add your favourites to the
+            cart.
+          </p>
+        </div>
+      </section>
+
+      <section class="content">
+        <aside class="filters">
+          <div class="filter-head">
+            <h2>Filters</h2>
+            <button id="clearFilters" class="clear-btn">Clear</button>
+          </div>
+
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="all">All categories</option>
+          </select>
+
+          <label for="priceRange">Maximum price</label>
+          <div class="price-line">
+            <span>$0</span><strong>$<span id="priceValue">1000</span></strong>
+          </div>
+          <input
+            id="priceRange"
+            type="range"
+            min="0"
+            max="1000"
+            value="1000"
+            step="5"
+          />
+
+          <label for="rating">Minimum rating</label>
+          <select id="rating">
+            <option value="0">Any rating</option>
+            <option value="4">4★ & above</option>
+            <option value="3">3★ & above</option>
+            <option value="2">2★ & above</option>
+            <option value="1">1★ & above</option>
+          </select>
+
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="default">Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating-high">Rating: High to Low</option>
+          </select>
+        </aside>
+
+        <section class="products-area">
+          <div class="results-bar">
+            <p id="resultText">Loading products...</p>
+          </div>
+          <div id="productGrid" class="product-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <div id="cartOverlay" class="overlay hidden"></div>
+    <aside id="cartPanel" class="cart-panel">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="closeCart" class="close-btn">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div>
+          <span>Total</span><strong>$<span id="cartTotal">0.00</span></strong>
+        </div>
+        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+      </div>
+    </aside>
+
+    <script src="ecommerce.js"></script>
+  </body>
+</html>
