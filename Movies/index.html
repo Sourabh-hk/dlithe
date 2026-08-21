@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieShelf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-box">M</div>
+                <div class="logo-text">
+                    <h1>MovieShelf</h1>
+                    <p>A small collection of films worth watching</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <span class="hero-label">MOVIE LIBRARY</span>
+                <h2>Find something good to watch.</h2>
+                <p>Search the collection, narrow it down, or sort it your way.</p>
+            </div>
+            <div class="hero-right">
+                <div class="status">
+                    <span>Updated collection</span>
+                    <span class="status-dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls" aria-label="Filters and search">
+            <div class="control-group">
+                <label for="search">SEARCH</label>
+                <input type="text" id="search" placeholder="Try a title, genre or language...">
+            </div>
+
+            <div class="control-group">
+                <label for="genre">GENRE</label>
+                <select id="genre">
+                    <option value="All">All genres</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="language">LANGUAGE</label>
+                <select id="language">
+                    <option value="All">All languages</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="rating">MINIMUM RATING</label>
+                <select id="rating">
+                    <option value="0">Any rating</option>
+                    <option value="7.0">7.0+</option>
+                    <option value="8.0">8.0+</option>
+                    <option value="8.5">8.5+</option>
+                    <option value="9.0">9.0+</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="sort">SORT BY</label>
+                <select id="sort">
+                    <option value="recommended">Recommended</option>
+                    <option value="rating-desc">Rating: high to low</option>
+                    <option value="rating-asc">Rating: low to high</option>
+                    <option value="year-desc">Newest first</option>
+                    <option value="year-asc">Oldest first</option>
+                    <option value="title-asc">Title: A-Z</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="statistics" aria-label="Movie Statistics">
+            <div class="stat-box">
+                <span class="stat-label">Movies</span>
+                <span class="stat-value" id="stat-count">-</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Average Rating</span>
+                <span class="stat-value" id="stat-avg">-</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Highest Rated</span>
+                <span class="stat-value" id="stat-high">-</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Latest Release</span>
+                <span class="stat-value" id="stat-latest">-</span>
+            </div>
+        </section>
+
+        <section class="movie-area" aria-live="polite">
+            <div id="status-message" class="status-message">Loading movies...</div>
+            <div id="movie-grid" class="movie-grid hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MovieShelf Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
