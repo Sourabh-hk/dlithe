@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.chat-container {
+    width: 450px;
+    height: 600px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+}
+
+.chat-header h2 {
+    margin-bottom: 5px;
+}
+
+.chat-header p {
+    font-size: 14px;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+.message {
+    max-width: 75%;
+    margin-bottom: 15px;
+}
+
+.message .name {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message p {
+    padding: 12px 15px;
+    border-radius: 12px;
+    line-height: 1.4;
+}
+
+.bot {
+    margin-right: auto;
+}
+
+.bot p {
+    background: #f1f5f9;
+    color: #333;
+}
+
+.user {
+    margin-left: auto;
+    text-align: right;
+}
+
+.user p {
+    background: #2563eb;
+    color: white;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #2563eb;
+}
+
+.chat-input button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: #1d4ed8;
+}
+@media (max-width: 600px) {
+
+    .chat-container {
+        width: 95%;
+        height: 90vh;
+        border-radius: 10px;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .chat-header {
+        padding: 15px;
+    }
+
+    .chat-box {
+        padding: 15px;
+    }
+
+    .chat-input {
+        padding: 10px;
+    }
+
+    .chat-input button {
+        padding: 10px 15px;
+    }
+}
