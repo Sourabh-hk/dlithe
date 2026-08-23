@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchPoint - Matchmaking Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🎮</span>
+            <h1>MatchPoint</h1>
+        </div>
+        <div class="header-status">
+            <span class="status-dot online"></span>
+            <span id="header-status-text">Matchmaking Online</span>
+        </div>
+    </header>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>Players Waiting</h3>
+            <p id="stat-waiting">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Matches Created</h3>
+            <p id="stat-matches">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Available Modes</h3>
+            <p id="stat-modes">5</p>
+        </div>
+        <div class="stat-card">
+            <h3>Queue Status</h3>
+            <p id="stat-queue" class="status-searching">Searching</p>
+        </div>
+    </div>
+
+    <main class="dashboard">
+        <div class="main-column">
+            <!-- Join Matchmaking Form -->
+            <section class="card form-section">
+                <h2>Join Matchmaking</h2>
+                <form id="join-form" novalidate>
+                    <div class="form-group">
+                        <label for="player-name">Player Name</label>
+                        <input type="text" id="player-name" placeholder="Enter player name" autocomplete="off">
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="game-level">Game Level</label>
+                            <select id="game-level">
+                                <option value="" disabled selected>Select level</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                            <span class="error-msg" id="level-error"></span>
+                        </div>
+                        
+                        <div class="form-group half">
+                            <label for="game-mode">Preferred Game Mode</label>
+                            <select id="game-mode">
+                                <option value="" disabled selected>Select mode</option>
+                                <option value="Battle Royale">Battle Royale</option>
+                                <option value="Team Deathmatch">Team Deathmatch</option>
+                                <option value="Capture the Flag">Capture the Flag</option>
+                                <option value="Ranked">Ranked</option>
+                                <option value="Casual">Casual</option>
+                            </select>
+                            <span class="error-msg" id="mode-error"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn" id="join-btn">Join Queue</button>
+                </form>
+            </section>
+
+            <!-- Waiting Players Section -->
+            <section class="card queue-section">
+                <div class="section-header">
+                    <h2>Players Looking for Match</h2>
+                    <button class="btn secondary-btn" id="find-match-btn">Find Match</button>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search players by name, level, or mode..." autocomplete="off">
+                </div>
+
+                <div id="loading-state" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Loading matchmaking queue...</p>
+                </div>
+                <div id="error-state" class="hidden">
+                    <p id="error-message">Unable to load players.</p>
+                    <button class="btn warning-btn btn-sm" id="retry-btn">Try Again</button>
+                </div>
+                
+                <div id="players-list" class="players-list">
+                    <!-- Players rendered here dynamically -->
+                </div>
+                <div id="empty-players" class="empty-state hidden">
+                    <p>No players are currently waiting.</p>
+                    <span>Join the queue to start matchmaking.</span>
+                </div>
+            </section>
+        </div>
+
+        <aside class="side-column">
+            <!-- Recent Matches -->
+            <section class="card matches-section">
+                <div class="section-header">
+                    <h2>Recent Matches</h2>
+                    <button class="btn danger-btn-outline btn-sm" id="clear-session-btn">Clear Session</button>
+                </div>
+                <div id="matches-list" class="matches-list">
+                    <!-- Matches rendered here dynamically -->
+                </div>
+                <div id="empty-matches" class="empty-state">
+                    <p>No matches created yet.</p>
+                    <span>Your completed matches will appear here.</span>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <!-- Custom Confirmation Modal -->
+    <div id="confirm-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Clear Session?</h3>
+            <p>Are you sure you want to clear the session? This will remove all waiting players and recent matches.</p>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancel-clear-btn">Cancel</button>
+                <button class="btn danger-btn" id="confirm-clear-btn">Yes, Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications Container -->
+    <div id="notifications-container" class="notifications-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
