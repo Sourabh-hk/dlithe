@@ -1,0 +1,52 @@
+.appointment-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.doctor-info .doctor-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.doctor-info .doctor-specialization {
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.appointment-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.mt-1 {
+  margin-top: 2px;
+}
+
+.appointment-actions {
+  margin-top: auto;
+}

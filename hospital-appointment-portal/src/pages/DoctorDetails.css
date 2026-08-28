@@ -1,0 +1,128 @@
+.back-link {
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--primary-dark);
+}
+
+.doctor-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.profile-main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-large {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-light);
+  margin-bottom: 1.5rem;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.profile-specialization {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-icon-wrapper {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.slot-badge {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.slot-icon {
+  margin-right: 6px;
+  color: var(--primary);
+}
+
+.not-found-container {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .doctor-profile-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
