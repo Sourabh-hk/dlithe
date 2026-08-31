@@ -1,0 +1,149 @@
+.enquiry-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.enquiry-form-container {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.enquiry-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.enquiry-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(31, 75, 153, 0.1);
+}
+
+.enquiry-form input.input-error,
+.enquiry-form textarea.input-error {
+  border-color: var(--danger);
+}
+
+.error-text {
+  display: block;
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.form-error-alert {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.success-message {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.success-message h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.enquiry-property-summary {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.enquiry-property-summary h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.summary-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.enquiry-property-summary h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.summary-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0.5rem 0;
+}
+
+.enquiries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.edit-form {
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .enquiry-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .enquiry-property-summary {
+    order: -1; /* Display summary first on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+}

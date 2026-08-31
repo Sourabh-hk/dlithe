@@ -1,0 +1,19 @@
+.favourites-page {
+  padding-top: 2rem;
+}
+
+.favourites-page .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.favourites-page .section-title {
+  margin-bottom: 0.25rem;
+}
+
+.favourites-count {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}

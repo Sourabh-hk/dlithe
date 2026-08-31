@@ -1,0 +1,233 @@
+.property-details-page {
+  padding-top: 1rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+  color: var(--primary);
+}
+
+.property-details-container {
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.property-main-image-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.property-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-badges {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.badge-type, .badge-furnishing {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-type {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.badge-furnishing {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+}
+
+.detail-favourite-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--white);
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.detail-favourite-btn:hover {
+  transform: scale(1.05);
+}
+
+.property-info-section {
+  padding: 2.5rem;
+}
+
+.property-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.property-title-large {
+  font-size: 2.25rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.property-full-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.property-price-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.property-price-large span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-left: 0.25rem;
+}
+
+.property-key-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.key-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.key-feature-icon {
+  font-size: 2rem;
+  color: var(--text-light);
+}
+
+.key-feature-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.key-feature-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.property-description {
+  margin-bottom: 2.5rem;
+}
+
+.property-description h3, .property-amenities h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.property-description p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.amenity-icon {
+  color: var(--success);
+}
+
+.property-actions {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  text-align: right;
+}
+
+.enquire-large-btn {
+  font-size: 1.1rem;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .property-main-image-container {
+    height: 300px;
+  }
+  
+  .property-info-section {
+    padding: 1.5rem;
+  }
+  
+  .property-header {
+    flex-direction: column;
+  }
+  
+  .property-actions {
+    text-align: center;
+  }
+  
+  .enquire-large-btn {
+    width: 100%;
+  }
+}

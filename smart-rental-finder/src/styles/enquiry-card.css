@@ -1,0 +1,118 @@
+.enquiry-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.enquiry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.enquiry-property-info h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.status-contacted {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.status-closed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status-cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.enquiry-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  color: var(--primary);
+}
+
+.edit-btn:hover {
+  background-color: rgba(31, 75, 153, 0.1);
+}
+
+.delete-btn {
+  color: var(--danger);
+}
+
+.delete-btn:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.enquiry-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.enquiry-message p {
+  color: var(--text-dark);
+  background-color: var(--background);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}

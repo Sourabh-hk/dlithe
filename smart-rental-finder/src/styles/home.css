@@ -1,0 +1,112 @@
+.home-page {
+  width: 100%;
+}
+
+.hero-section {
+  background-color: var(--primary);
+  background-image: linear-gradient(rgba(31, 75, 153, 0.9), rgba(31, 75, 153, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1920');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.hero-search-wrapper {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.benefits-section {
+  background-color: var(--white);
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--background);
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.benefit-card p {
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
